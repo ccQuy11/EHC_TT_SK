@@ -24,13 +24,17 @@ grep : tìm kiếm file khớp với mẫu (grep "81.143.211.90" access.log)
 
 Task 7:
 Giới thiệu toán tử shell
-& thực thi các lệnh ở chế độ nền.
-&& tạo danh sách các lệnh cần chạy
->  là bộ chuyển hướng đầu ra, lấy đầu ra từ một lệnh đang chạy và gửi đầu ra đó đến một nơi khác. (hey > welcome ==)  cat welcome) ( Nếu welcome đã tồn tại sẽ bị ghi đè)
->> chỉ đặt đầu ra ở cuối (echo hello >> welcome ==) cat welcome
-hey
-hello
-)
+
+    & thực thi các lệnh ở chế độ nền.
+    
+    && tạo danh sách các lệnh cần chạy
+    
+    >  là bộ chuyển hướng đầu ra, lấy đầu ra từ một lệnh đang chạy và gửi đầu ra đó đến một nơi khác. (hey > welcome ==)  cat welcome) ( Nếu welcome đã tồn tại sẽ bị ghi đè)
+    
+    >> chỉ đặt đầu ra ở cuối (echo hello >> welcome ==) cat welcome
+    hey
+    hello
+    )
 
 Task 8:
 Kết luận về linux
