@@ -22,6 +22,8 @@ Sử dụng lệnh ps để cung cấp danh sách các tiến trình đang chạ
 
 <img width="308" height="193" alt="image" src="https://github.com/user-attachments/assets/d33ad610-0bf0-41df-bee3-1679954c63ac" />
 
+ps à một lệnh trong Unix/Linux (Process Status) dùng để liệt kê và hiển thị thông tin về các tiến trình (process) đang chạy trên hệ thống.
+
 Muốn full thì là ps aux
 
           a = hiển thị các tiến trình cho tất cả người dùng
@@ -39,3 +41,59 @@ Có thể gửi tín hiệu để chấm dứt tiến trình. VD dùng lệnh Ki
               SIGKILL - Giết tiến trình - không thực hiện bất kỳ dọn dẹp nào sau đó
               
               SIGSTOP - Dừng/tạm dừng một tiến trình
+
+🍌 Getting Processes/Services to Start on Boot
+
+Nhập systemctl để tương tác systemd
+
+systemctl [option] [service] Ví dụ  systemctl start apache2
+
+Có 4 options: 
+
+            Start
+            
+            Stop
+
+            Enable
+
+            Disable
+
+fg: đưa một tiến trình đang ở chế độ nền trước đó trở lại chế độ nền
+
+😽 Maintaining Your System: Automation
+
+          crontab -e
+
+Crontab đơn giản là một tệp đặc biệt có định dạng được quy rình nhận dạng để thực thi từng dòng lệnh theo từng bước. Crontab yêu cầu 6 giá trị cụ thể:
+
+           MIN	What minute to execute at
+
+           HOUR     What hour to execute at
+
+           DOM      What day of the month to execute at
+
+           MON      What month of the year to execute at
+
+           DOW      What day of the week to execute at
+
+           CMD      The actual command that will be executed.
+
+Ví dụ về việc sao lưu tệp. Muốn sao lưu "Documents" của "cmnatic" cứ sau 12 giờ.. Chúng ta sẽ sử dụng định dạng sau: 
+
+             0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/
+
+Hỗ trợ ký tự đại diện hoặc dấu sao ( *).
+
+💣Maintaining Your System: Package Management
+
+apt install ........ để cài đặt 
+
+add-apt-repository --remove ppa:PPA_Name/ppa  
+
+apt remove sublime-text
+
+🚒Maintaining Your System: Logs
+
+Này chủ yếu nói về tập tin /var/log
+
+Có thể vào để kiểm tra người dùng truy cập ip và file nào 
